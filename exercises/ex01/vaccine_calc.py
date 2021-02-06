@@ -32,7 +32,7 @@ doses_admin = int(input("Doses administered: "))
 doses_day = int(input("Doses per day: "))
 target_percent = int(input("Target percent vaccinated: "))
 
-math = ((target_percent / 100) * (pop * 2) - (doses_admin / 2)) / doses_day 
+math = ((target_percent / 100) * (pop * 2) - doses_admin) / doses_day
 
 day = (round(math))
 
