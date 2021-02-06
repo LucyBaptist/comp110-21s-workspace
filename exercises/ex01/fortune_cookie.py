@@ -13,7 +13,7 @@ from random import randint
 
 
 # Begin your solution here...
-fortune = randint(1,100)
+fortune = randint(1, 100)
 print("Your fortune cookie says...")
 if fortune < 60:
     if fortune < 30:
@@ -28,4 +28,3 @@ if fortune < 85:
 else:
     print("Try your best, success is within your reach.")
 print("Now, go spread positive vibes!")
-

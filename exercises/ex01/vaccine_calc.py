@@ -18,14 +18,9 @@ from datetime import timedelta
 
 
 # Begin your solution here...
-
 today: datetime = datetime.today()
-
 one_day: timedelta = timedelta(1)
-
 tomorrow: datetime = today + one_day
-
-
 
 pop = int(input("Population: "))
 doses_admin = int(input("Doses administered: "))
@@ -33,11 +28,9 @@ doses_day = int(input("Doses per day: "))
 target_percent = int(input("Target percent vaccinated: "))
 
 math = ((target_percent / 100) * (pop * 2) - doses_admin) / doses_day
-
 day = (round(math))
-
 time_pass: timedelta = timedelta(day)
-
 future: datetime = today + time_pass
+future_f = future.strftime("%B %d, %Y")
 
-print("We will reach " + str(target_percent) + "% vaccination in " + str(day) + " days, which falls on " + (future.strftime("%B %d, %Y")))
+print("We will reach " + str(target_percent) + "% vaccination in " + str(day) + " days, which falls on " + future_f)

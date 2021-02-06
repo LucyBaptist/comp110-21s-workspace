@@ -17,4 +17,3 @@ if user_num % 7 == 0 and user_num % 2 != 0:
 
 if user_num % 7 != 0 and user_num % 2 != 0:
     print("CAROLINA")
-    
