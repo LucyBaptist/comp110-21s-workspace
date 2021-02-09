@@ -10,7 +10,9 @@ def main() -> None:
     print("Your fortune cookie says...")
     # TODO 2: Print the result of calling your fortune_cookie function.
     fortune = randint(0,100)
+    print(fortune_cookie)
     print("Now, go spread positive vibes!")
+    return None
 
 def fortune_cookie(fortune) -> str:
     if fortune < 60:
