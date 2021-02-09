@@ -9,7 +9,7 @@ def main() -> None:
     """The entrypoint of the program, when run as a module."""
     print("Your fortune cookie says...")
 
-    print(fortune_cookie)
+    print(fortune_cookie(fortune))
     print("Now, go spread positive vibes!")
     return None
 
