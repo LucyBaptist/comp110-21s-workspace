@@ -5,7 +5,6 @@ from random import randint
 __author__ = "730386091"
 
 
-
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     print("Your fortune cookie says...")
@@ -14,8 +13,9 @@ def main() -> None:
     return None
 
 
-def fortune_cookie(fortune = randint(0, 100)) -> str:
+def fortune_cookie() -> str:
     """Gives a fortune."""
+    fortune = randint(0, 100)
     if fortune < 60:
         if fortune < 30:
             return("You will find a pleasant surprise next week.")
