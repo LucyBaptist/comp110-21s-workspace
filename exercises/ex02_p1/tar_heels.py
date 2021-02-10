@@ -11,6 +11,7 @@ def main() -> None:
 
 
 def tar_heels(choice: int) -> str:
+    """Gives a word given integer input."""
     if choice % 2 == 0 and choice % 7 == 0:
         return("TAR HEELS")
     if choice % 2 == 0 and choice % 7 != 0:
