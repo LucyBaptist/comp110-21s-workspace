@@ -19,7 +19,6 @@ def tar_heel(choice: int) -> str:
     if choice % 7 != 0 and choice % 2 != 0:
         return("CAROLINA")
     return("CAROLINA")
-    
 
 if __name__ == "__main__":
     main()
