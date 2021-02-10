@@ -9,6 +9,7 @@ def main() -> None:
     print(tar_heels(choice))
     return None
 
+
 def tar_heels(choice: int) -> str:
     if choice % 2 == 0 and choice % 7 == 0:
         return("TAR HEELS")
@@ -19,6 +20,7 @@ def tar_heels(choice: int) -> str:
     if choice % 7 != 0 and choice % 2 != 0:
         return("CAROLINA")
     return("CAROLINA")
+
 
 if __name__ == "__main__":
     main()
