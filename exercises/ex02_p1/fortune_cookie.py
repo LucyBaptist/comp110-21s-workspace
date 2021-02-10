@@ -3,6 +3,7 @@
 from random import randint
 
 __author__ = "730386091"
+fortune = randint(0, 100)
 
 
 def main() -> None:
@@ -13,7 +14,7 @@ def main() -> None:
     return None
 
 
-def fortune_cookie(fortune=randint(0, 100)) -> str:
+def fortune_cookie(fortune: int) -> str:
     """Gives a fortune."""
     if fortune < 60:
         if fortune < 30:
