@@ -12,13 +12,21 @@ while input("Would you like to continue? yes/no: ") == "yes":
         """Entry point."""
         print(greet())
         result = (input("Type CONTINUE or RANDOM: "))
-        print(question_1())
-        a_1: str = str(input("Please enter the letter of your answer here: "))
-        print(question_2())
-        a_2: str = str(input("Please enter the letter of your answer here: "))
-        print(question_3())
-        a_3: str = str(input("Please enter the letter of your answer here: "))
-        print(point_keeping(a_1, a_2, a_3))
+        if result == "CONTINUE":
+            print(question_1())
+            a_1: str = str(input("Please enter the letter of your answer here: "))
+            print(question_2())
+            a_2: str = str(input("Please enter the letter of your answer here: "))
+            print(question_3())
+            a_3: str = str(input("Please enter the letter of your answer here: "))
+            print(point_keeping(a_1, a_2, a_3))
+        if result == "RANDOM":
+            rand_result = (input("Would you prefer to TYPE an integer or GENERATE?: "))
+            if rand_result == "TYPE":
+                number = (input("Pease type here: ")) # add function or something
+            if rand_result == "GENERATE":
+                number = int(randint(1, 300)
+
         
         count += 1
         print(f"You have taken this quiz {count} times.")
