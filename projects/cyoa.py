@@ -6,25 +6,24 @@ ANSWER_ONE: int = 1
 ANSWER_TWO: int = 30
 ANSWER_THREE: int = 100
 
-while input("Would you liketo continue? yes/no: ") == "yes":
+while input("Would you like to continue? yes/no: ") == "yes":
     count: int = 0
     def main() -> None:
-    """Entry point."""
-    print(greet())
-    result = (input("Type CONTINUE or RANDOM: "))
-    print(question_1())
-    a_1: str = str(input("Please enter the letter of your answer here: "))
-    print(question_2())
-    a_2: str = str(input("Please enter the letter of your answer here: "))
-    print(question_3())
-    a_3: str = str(input("Please enter the letter of your answer here: "))
-    print(point_keeping(a_1, a_2, a_3))
-    points = ans_1 + ans_2 + ans_3
-    count += 1
-    print(f"You have taken this quiz {count} times.")
+        """Entry point."""
+        print(greet())
+        result = (input("Type CONTINUE or RANDOM: "))
+        print(question_1())
+        a_1: str = str(input("Please enter the letter of your answer here: "))
+        print(question_2())
+        a_2: str = str(input("Please enter the letter of your answer here: "))
+        print(question_3())
+        a_3: str = str(input("Please enter the letter of your answer here: "))
+        print(point_keeping(a_1, a_2, a_3))
+        
+        count += 1
+        print(f"You have taken this quiz {count} times.")
 
 print(f"{player}, thank you for taking my quiz!")
-
 
 
 def greet() -> None:
@@ -61,11 +60,24 @@ def question_3() -> None:
 def point_keeping(ans_1: str, ans_2: str, ans_3: str) -> int:
     """A way of keeping track of points to determine results."""
     if ans_1 == "a":
-        then: ans_1 = ANSWER_ONE
+        return ANSWER_ONE
     if ans_1 == "b":
-        then: ans_1 = ANSWER_TWO
+        return ANSWER_TWO
     if ans_1 == "c":
-        then: ans_1 = ANSWER_THREE
+        return ANSWER_THREE
+    if ans_2 == "a":
+        return ANSWER_THREE
+    if ans_2 == "b":
+        return ANSWER_TWO
+    if ans_2 == "c":
+        return ANSWER_THREE
+    if ans_3 == "a":
+        return ANSWER_TWO
+    if ans_3 == "b":
+        return ANSWER_ONE
+    if ans_3 == "c":
+        return ANSWER_THREE
+
 
 
 def answer(score: int) -> str:
