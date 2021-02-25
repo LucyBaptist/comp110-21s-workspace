@@ -87,11 +87,11 @@ def points_total(f: int, s: int, t: int) -> int:
 
 def answer(score: int) -> str:
     """Gives the result of the quiz."""
-    if score =< 32 and score > 0 or score == 102:
+    if score < 33 and score > 0 or score == 102:
         return("You should read Remembrance of Earth's Past by Cixin Liu")
     if score > 32 and score < 100 or score == 160:
         return("You should read the Hainish Cycle by Ursula K. Le Guin")
-    if score => 100 and score =< 300:
+    if score > 99 and score < 301:
         return("You should read the Broken Earth Trilogy by N. K. Jemisin")
     return(f"{EYE_ROLL}, I said between 1 and 300, read Wayfarers by Becky Chambers")
 
