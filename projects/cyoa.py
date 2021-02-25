@@ -30,7 +30,7 @@ def main() -> None:
             points = points_total(first, second, third)
             print(answer(points))
         else:
-            rand_result = (input(f"{player}, would you prefer to TYPE an integer or GENERATE?: "))
+            rand_result = (input("Would you prefer to TYPE an integer or GENERATE?: "))
             if rand_result == "TYPE":
                 number = int(input("Pease type an integer between 1 and 300 here: ")) # add function or something
                 print(answer(number))
@@ -39,14 +39,13 @@ def main() -> None:
                 print(answer(number))
         count += 1
         print(f"You have taken this quiz {count} times")
-        print(f"{player}, thank you for taking my quiz!")
+        print("Thank you for taking my quiz!")
         
 
 def greet() -> None:
     """A way to introduce the player to the program."""
     print("Hello! This quiz will assign a sci-fi book series based on a series of questions that you wil answer.")
     print("Enter a name, then begin the quiz.")
-    global player
     player: str = str(input("Please enter a name: "))
     print(f"{player}, would you like to take the quiz or generate a random answer?")
     return None
