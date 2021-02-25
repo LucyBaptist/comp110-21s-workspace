@@ -1,3 +1,4 @@
+"""Established a loop and can either take the quiz or get a random answer"""
 __author__ = "730386091"
 
 from random import randint
@@ -9,11 +10,12 @@ EYE_ROLL: str = "\U0001F644"
 
 
 def main() -> None:
-    """Entry point.
-    established a loop and can either take the quiz or get a random answer"""
+    """Entry point."""
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
+        player: str = str(input("Please enter a name here: "))
+        print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
         if result == "CONTINUE":
             print("Which of these emojis reflects a setting that you are interested?")
@@ -28,12 +30,12 @@ def main() -> None:
             first: int = point_keeping_one(a_1)
             second: int = point_keeping_two(a_2)
             third: int = point_keeping_three(a_3)
-            points = points_total(first, second, third)
+            points: int = points_total(first, second, third)
             print(answer(points))
         else:
             rand_result = (input("Would you prefer to TYPE an integer or GENERATE?: "))
             if rand_result == "TYPE":
-                number = int(input("Pease type an integer between 1 and 300 here: ")) # add function or something
+                number = int(input("Pease type an integer between 1 and 300 here: "))
                 print(answer(number))
             if rand_result == "GENERATE":
                 number = int(randint(1, 300))
@@ -46,9 +48,8 @@ def main() -> None:
 def greet() -> None:
     """A way to introduce the player to the program."""
     print("Hello! This quiz will assign a sci-fi book series based on a series of questions that you wil answer.")
+    print("You can either take the quiz or generate a random answer.")
     print("Enter a name, then begin the quiz.")
-    player: str = str(input("Please enter a name: "))
-    print(f"{player}, would you like to take the quiz or generate a random answer?")
     return None
 
 
