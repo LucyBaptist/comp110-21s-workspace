@@ -9,7 +9,8 @@ EYE_ROLL: str = "\U0001F644"
 
 
 def main() -> None:
-    """Entry point."""
+    """Entry point.
+    established a loop and can either take the quiz or get a random answer"""
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
