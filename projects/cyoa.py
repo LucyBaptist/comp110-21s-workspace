@@ -5,33 +5,41 @@ from random import randint
 ANSWER_ONE: int = 1
 ANSWER_TWO: int = 30
 ANSWER_THREE: int = 100
-EYE_ROLL: str = \U0001F644
+EYE_ROLL: str = "\U0001F644"
 
-# add a while loop
 
 def main() -> None:
     """Entry point."""
-    print(greet())
-    result = (input("Type CONTINUE or RANDOM: "))
-    if result == "CONTINUE":
-        print("Which of these emojis reflects a setting that you are interested?")
-        print("a. \U0001F307 \n b. \U0001F304 \n c. \U0001F3DE ")
-        a_1: str = str(input("Please enter the letter of your answer here: "))
-        print("Do you like aliens in fiction?")
-        print("a. no \n b. yes, but only if they're basically humans \n c. yes, the more alien the better")
-        a_2: str = str(input("Please enter the letter of your answer here: "))
-        print("How would you like the book serie sto make you feel?")
-        print("a. \U0001F914 \n b. \U0001F92F \n c. \U0001F62E")
-        a_3: str = str(input("Please enter the letter of your answer here: "))
-        points = points_total()
-        print(answer(points))
-    else:
-        rand_result = (input(f"{player}, would you prefer to TYPE an integer or GENERATE?: "))
-        if rand_result == "TYPE":
-            number = (input("Pease type an integer between 1 and 300 here: ")) # add function or something
-        if rand_result == "GENERATE":
-            number = int(randint(1, 300))
-        print(answer(number))
+    count: int = 0
+    while input("Would you like to continue the quiz? yes/no: ") == "yes":
+        print(greet())
+        result = (input("Type CONTINUE or RANDOM: "))
+        if result == "CONTINUE":
+            print("Which of these emojis reflects a setting that you are interested?")
+            print("a. \U0001F307 \n b. \U0001F304 \n c. \U0001F3DE ")
+            a_1: str = str(input("Please enter the letter of your answer here: "))
+            print("Do you like aliens in fiction?")
+            print("a. no \n b. yes, but only if they're basically humans \n c. yes, the more alien the better")
+            a_2: str = str(input("Please enter the letter of your answer here: "))
+            print("How would you like the book serie sto make you feel?")
+            print("a. \U0001F914 \n b. \U0001F92F \n c. \U0001F62E")
+            a_3: str = str(input("Please enter the letter of your answer here: "))
+            first: int = point_keeping_one(a_1)
+            second: int = point_keeping_two(a_2)
+            third: int = point_keeping_three(a_3)
+            points = points_total(first, second, third)
+            print(answer(points))
+        else:
+            rand_result = (input(f"{player}, would you prefer to TYPE an integer or GENERATE?: "))
+            if rand_result == "TYPE":
+                number = int(input("Pease type an integer between 1 and 300 here: ")) # add function or something
+                print(answer(number))
+            if rand_result == "GENERATE":
+                number = int(randint(1, 300))
+                print(answer(number))
+        count += 1
+        print(f"You have taken this quiz {count} times")
+        print(f"{player}, thank you for taking my quiz!")
         
 
 def greet() -> None:
@@ -71,30 +79,22 @@ def point_keeping_three(ans_3: str) -> int:
     return ANSWER_THREE
 
 
-def points_total() -> int:
+def points_total(f: int, s: int, t: int) -> int:
     """Gives the total points."""
-    first = point_keeping_one(a_1)
-    second = point_keeping_two(a_2)
-    third = point_keeping_three(a_3)
-    total = int(first + second + third)
+    total = int(f + s + t)
     return total
 
 
 def answer(score: int) -> str:
     """Gives the result of the quiz."""
-    if score =< 32 and score > 0 or score = 102:
+    if score =< 32 and score > 0 or score == 102:
         return("You should read Remembrance of Earth's Past by Cixin Liu")
-    if score > 32 and score < 100 or score = 160:
+    if score > 32 and score < 100 or score == 160:
         return("You should read the Hainish Cycle by Ursula K. Le Guin")
     if score => 100 and score =< 300:
         return("You should read the Broken Earth Trilogy by N. K. Jemisin")
     return(f"{EYE_ROLL}, I said between 1 and 300, read Wayfarers by Becky Chambers")
 
-
-    count += 1
-    print(f"You have taken this quiz {count} times.")
-
-print(f"{player}, thank you for taking my quiz!")
 
 if __name__ == "__main__":
     main()
