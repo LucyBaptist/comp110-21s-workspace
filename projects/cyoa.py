@@ -7,9 +7,8 @@ ANSWER_ONE: int = 1
 ANSWER_TWO: int = 30
 ANSWER_THREE: int = 100
 EYE_ROLL: str = "\U0001F644"
-global player
-global points
-
+player: str = "name"
+points: int = 0
 
 def main() -> None:
     """Entry point."""
