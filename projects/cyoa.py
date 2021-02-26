@@ -15,7 +15,7 @@ def main() -> None:
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
         global player
-        player: str = (input("Please enter a name here: "))
+        player = (input("Please enter a name here: "))
         print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
         if result == "CONTINUE":
@@ -32,7 +32,7 @@ def main() -> None:
             second: int = point_keeping_two(a_2)
             third: int = point_keeping_three(a_3)
             global points
-            points: int = points_total(first, second, third)
+            points = points_total(first, second, third)
             print(answer(points))
         else:
             rand_result = (input("Would you prefer to TYPE an integer or GENERATE?: "))
