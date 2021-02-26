@@ -13,7 +13,7 @@ def main() -> None:
     """Entry point."""
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
-        print(greet())
+        print(greet)
         global player
         player = (input("Please enter a name here: "))
         print(f"{player}, would you like to take the quiz or generate a random answer?")
