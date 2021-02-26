@@ -1,4 +1,4 @@
-"""Established a loop and can either take the quiz or get a random answer"""
+"""Established a loop and can either take the quiz or get a random answer."""
 __author__ = "730386091"
 
 from random import randint
