@@ -14,8 +14,6 @@ def main() -> None:
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
-        global player
-        player = (input("Please enter a name here: "))
         print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
         if result == "CONTINUE":
@@ -47,12 +45,14 @@ def main() -> None:
         print("Thank you for taking my quiz!")
         
 
-def greet() -> None:
+def greet() -> str:
     """A way to introduce the player to the program."""
     print("Hello! This quiz will assign a sci-fi book series based on a series of questions that you wil answer.")
     print("You can either take the quiz or generate a random answer.")
     print("Enter a name, then begin the quiz.")
-    return None
+    global player
+    player = (input("Please enter a name here: "))
+    return player
 
 
 def point_keeping_one(ans_1: str) -> int:
