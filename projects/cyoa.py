@@ -10,11 +10,13 @@ EYE_ROLL: str = "\U0001F644"
 global player
 global points
 
+
 def main() -> None:
     """Entry point."""
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
+        global player
         player = (input("Please enter a name here: "))
         print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
@@ -31,6 +33,7 @@ def main() -> None:
             first: int = point_keeping_one(a_1)
             second: int = point_keeping_two(a_2)
             third: int = point_keeping_three(a_3)
+            global points
             points = points_total(first, second, third)
             print(answer(points))
         else:
