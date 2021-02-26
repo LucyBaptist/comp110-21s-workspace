@@ -10,13 +10,12 @@ EYE_ROLL: str = "\U0001F644"
 player: str = "name"
 points: int = 0
 
+
 def main() -> None:
     """Entry point."""
     count: int = 0
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
         print(greet())
-        global player
-        player = (input("Please enter a name here: "))
         print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
         if result == "CONTINUE":
@@ -53,6 +52,8 @@ def greet() -> None:
     print("Hello! This quiz will assign a sci-fi book series based on a series of questions that you wil answer.")
     print("You can either take the quiz or generate a random answer.")
     print("Enter a name, then begin the quiz.")
+    global player
+    player = (input("Please enter a name here: "))
     return None
 
 
