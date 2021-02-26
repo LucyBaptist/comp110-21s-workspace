@@ -14,8 +14,8 @@ points: int = 0
 def main() -> None:
     """Entry point."""
     count: int = 0
+    print(greet())
     while input("Would you like to continue the quiz? yes/no: ") == "yes":
-        print(greet())
         print(f"{player}, would you like to take the quiz or generate a random answer?")
         result = (input("Type CONTINUE or RANDOM: "))
         if result == "CONTINUE":
@@ -23,9 +23,9 @@ def main() -> None:
             print("a. \U0001F307 \nb. \U0001F304 \nc. \U0001F3DE ")
             a_1: str = str(input("Please enter the letter of your answer here: "))
             print("Do you like aliens in fiction?")
-            print("a. no \nb. yes, but only if they're basically humans \nc. yes, the more alien the better")
+            print("a. No \nb. Yes, but only if they're basically humans \nc. Yes, the more alien the better")
             a_2: str = str(input("Please enter the letter of your answer here: "))
-            print("How would you like the book serie sto make you feel?")
+            print("How would you like the book series to make you feel?")
             print("a. \U0001F914 \nb. \U0001F92F \nc. \U0001F62E")
             a_3: str = str(input("Please enter the letter of your answer here: "))
             first: int = point_keeping_one(a_1)
@@ -44,7 +44,7 @@ def main() -> None:
                 print(answer(number))
         count += 1
         print(f"You have taken this quiz {count} times")
-        print("Thank you for taking my quiz!")
+    print("Thank you for taking my quiz!")
         
 
 def greet() -> None:
@@ -59,27 +59,27 @@ def greet() -> None:
 
 def point_keeping_one(ans_1: str) -> int:
     """Gives the score for one."""
-    if ans_1 == "a":
+    if ans_1 == "a" or ans_1 == "A":
         return ANSWER_ONE
-    if ans_1 == "b":
+    if ans_1 == "b" or ans_1 == "B":
         return ANSWER_TWO
     return ANSWER_THREE
 
 
 def point_keeping_two(ans_2: str) -> int:
     """Gives the score for one."""
-    if ans_2 == "a":
+    if ans_2 == "a" or ans_2 == "A":
         return ANSWER_THREE
-    if ans_2 == "b":
+    if ans_2 == "b" or ans_2 == "B":
         return ANSWER_TWO
     return ANSWER_THREE
 
 
 def point_keeping_three(ans_3: str) -> int:
     """Gives the score for three."""
-    if ans_3 == "a":
+    if ans_3 == "a" or ans_3 == "A":
         return ANSWER_TWO
-    if ans_3 == "b":
+    if ans_3 == "b" or ans_3 == "B":
         return ANSWER_ONE
     return ANSWER_THREE
 
