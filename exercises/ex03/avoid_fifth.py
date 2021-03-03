@@ -12,9 +12,14 @@ def main() -> None:
 
 def avoid_fifth(words: str) -> str:
     """Removes e."""
-    if "e" in words:
-        new_words:str = words.rstrip("e")
-        return new_words
+    indx: int = 0
+    while indx <= len(words):
+        if words[indx] == "e" or words[indx] == "E":
+            char: str = words[indx]
+            words.strip(char)
+            return words
+        return words
+        indx += 1
     return words
 
        
