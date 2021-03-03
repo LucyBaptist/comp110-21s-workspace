@@ -19,6 +19,7 @@ def avoid_fifth(sentence: str) -> str:
             char: str = words[indx]
             words.strip(char)
             return words
+        return words
         indx += 1
     return words
 
