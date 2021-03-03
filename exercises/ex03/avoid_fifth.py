@@ -10,8 +10,9 @@ def main() -> None:
     print(avoid_fifth("Hello World!"))
 
 
-def avoid_fifth(words: str) -> str:
+def avoid_fifth(sentence: str) -> str:
     """Removes e."""
+    words: str = sentence
     indx: int = 0
     while indx <= len(words):
         if words[indx] == "e" or words[indx] == "E":
