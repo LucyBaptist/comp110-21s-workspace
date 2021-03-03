@@ -6,8 +6,8 @@ __author__: str = "730386091"
 def main() -> None:
     """Entrypoint of the program."""
     print(avoid_fifth("three"))
-    print(avoid_fifth("hello"))
-    print(avoid_fifth("The sentence we have here possesses E's galore!"))
+    print(avoid_fifth("print"))
+    print(avoid_fifth("Hello World!"))
 
 
 def avoid_fifth(words: str) -> str:
