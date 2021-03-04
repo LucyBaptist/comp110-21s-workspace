@@ -13,7 +13,7 @@ def main() -> None:
 
 
 def palindromify(word: str, tf: bool) -> str:
-    num: int = len(word)
+    num: int = len(word) - 1
     pal: str = ""
     if tf == True:
         while num >= 0:
