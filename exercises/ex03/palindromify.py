@@ -9,6 +9,7 @@ def main() -> None:
     print(palindromify("han", True))
     print(palindromify("red", True))
     print(palindromify("live on time ", False))
+    return None
 
 
 def palindromify(word: str, tf: bool) -> str:
@@ -16,12 +17,12 @@ def palindromify(word: str, tf: bool) -> str:
     pal: str = ""
     if tf == True:
         while num >= 0:
-            pal += word[num]
-            num -= 1
+            pal = pal + word[num]
+            num = num - 1
     else:
         while num >= 1:
-            pal += word[num - 1]
-            num -= 1 
+            pal = pal + word[num - 1]
+            num = num - 1 
     return(word + pal)
             
 
