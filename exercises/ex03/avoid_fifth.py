@@ -19,7 +19,7 @@ def avoid_fifth(sentence: str) -> str:
         if words[indx] == "e" or words[indx] == "E":
             indx += 1
         else:
-            result += "words"[indx]
+            result += words[indx]
             indx += 1
     return result
 
