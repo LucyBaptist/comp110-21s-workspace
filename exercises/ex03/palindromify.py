@@ -13,9 +13,10 @@ def main() -> None:
 
 
 def palindromify(word: str, tf: bool) -> str:
+    """Makes a palindrome."""
     num: int = len(word) - 1
     pal: str = ""
-    if tf == True:
+    if tf is True:
         while num >= 0:
             pal = pal + word[num]
             num = num - 1

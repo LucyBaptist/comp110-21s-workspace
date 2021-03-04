@@ -16,26 +16,26 @@ def main() -> None:
 
 
 def is_prime(test: int) -> bool:
+    """Determines if prime."""
     denom: int = 2
     while denom < test:
-        if test % denom == 0 or test % -denom == 0:
+        if test % denom == 0 or test < 0:
             return False
         denom += 1
     return True
 
 
-def list_primes(a: int, b: int) -> list:
-    num: int = a + 1
+def list_primes(a: int, b: int) -> list[int]:
+    """List of primes."""
+    num: int = a
     ans: list = []
-    while num < b:
-        if is_prime(num) == True:
+    while num <= b:
+        if is_prime(num) is True:
             ans.append(num)
             num += 1
         else:
             num += 1
     return ans 
-
-
 
 
 if __name__ == "__main__":
