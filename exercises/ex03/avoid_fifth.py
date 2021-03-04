@@ -14,14 +14,14 @@ def avoid_fifth(sentence: str) -> str:
     """Removes e."""
     words: str = sentence
     indx: int = 0
+    result: str = ""
     while indx <= len(words):
         if words[indx] == "e" or words[indx] == "E":
-            char: str = words[indx]
-            words.strip(char)
-            return words
-        return words
-        indx += 1
-    return words
+            indx += 1
+        else:
+            result += "words"[indx]
+            indx += 1
+    return result
 
        
 
