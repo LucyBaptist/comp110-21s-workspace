@@ -8,6 +8,7 @@ def main() -> None:
     print(avoid_fifth("three"))
     print(avoid_fifth("print"))
     print(avoid_fifth("Hello World!"))
+    return None
 
 
 def avoid_fifth(words: str) -> str:
