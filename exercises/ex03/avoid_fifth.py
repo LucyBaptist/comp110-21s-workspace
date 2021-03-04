@@ -24,7 +24,6 @@ def avoid_fifth(words: str) -> str:
             indx += 1
     return result
 
-    
 
 if __name__ == "__main__":
     main()

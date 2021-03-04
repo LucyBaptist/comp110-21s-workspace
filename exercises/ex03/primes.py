@@ -19,7 +19,7 @@ def is_prime(test: int) -> bool:
     """Determines if prime."""
     denom: int = 2
     while denom < test:
-        if test % denom == 0 or test < 0:
+        if test % denom == 0 or test < 0 or test ==1 or test == 0:
             return False
         denom += 1
     return True
@@ -28,7 +28,7 @@ def is_prime(test: int) -> bool:
 def list_primes(a: int, b: int) -> list[int]:
     """List of primes."""
     num: int = a
-    ans: list = []
+    ans: list[int] = []
     while num <= b:
         if is_prime(num) is True:
             ans.append(num)
