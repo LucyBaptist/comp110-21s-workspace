@@ -18,7 +18,7 @@ def main() -> None:
 def is_prime(test: int) -> bool:
     denom: int = 2
     while denom < test:
-        if test % denom == 0:
+        if test % denom == 0 or test % -denom == 0:
             return False
         denom += 1
     return True
