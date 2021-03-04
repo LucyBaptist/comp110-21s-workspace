@@ -15,7 +15,7 @@ def avoid_fifth(words: str) -> str:
     """Removes e."""
     indx: int = 0
     result: str = ""
-    while indx <= len(words):
+    while indx <= (len(words) - 1):
         if words[indx] == "e" or words[indx] == "E":
             result = result
             indx += 1
