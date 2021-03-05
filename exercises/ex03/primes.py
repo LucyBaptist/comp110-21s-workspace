@@ -18,14 +18,14 @@ def main() -> None:
 def is_prime(test: int) -> bool:
     """Determines if prime."""
     denom: int = 2
+    if test == 0:
+            return False
+    if test < 0:
+            return False
+    if test == 1:
+            return False
     while denom < test:
         if test % denom == 0:
-            return False
-        if test == 0:
-            return False
-        if test < 0:
-            return False
-        if test == 1:
             return False
         denom += 1
     return True
