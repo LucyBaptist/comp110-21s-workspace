@@ -19,11 +19,11 @@ def is_prime(test: int) -> bool:
     """Determines if prime."""
     denom: int = 2
     if test == 0:
-            return False
+        return False
     if test < 0:
-            return False
+        return False
     if test == 1:
-            return False
+        return False
     while denom < test:
         if test % denom == 0:
             return False
