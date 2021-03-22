@@ -24,9 +24,13 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
 
 def column_values(a: list[dict[str, str]], b: str) -> list[str]:
     columns: list[str] = []
-    i = 0
-    # or append in some way
     for row in a:
-        columns[i] = row
-        i += 1
+        columns.append(row)
     return columns
+
+
+def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
+    dictionary = {}
+    for col in x:
+        return col
+        
