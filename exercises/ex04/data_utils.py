@@ -22,17 +22,18 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
 
 # TODO: Define the other functions here.
 
-def column_values(a: list[dict[str, b: str]], b: str) -> list[str]:
-    columns: list[str] = []
+def column_values(a: list[dict[str, str]], b: str) -> list[str]:
+    columns = []
+    key = b
     for row in a:
-        return row
-    columns.append
+        columns.append(row[key])
     return columns
 
 
 def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
     dictionary = {}
     for col in x:
+        
         return col
 
 def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
