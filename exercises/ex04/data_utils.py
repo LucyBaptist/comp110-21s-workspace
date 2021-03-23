@@ -33,13 +33,25 @@ def column_values(a: list[dict[str, str]], b: str) -> list[str]:
 def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
     dictionary = {}
     for col in x:
-        
-        return col
+        name: str = col.keys
+        lst = column_values(x, name)
+        dictionary[col] = lst
+        return dictionary
+
 
 def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
     dictionary = {}
     for column in table:
-
+        list_col = []
+        i: int = 0
+        while i < row_num:
+            list_col.append(column)
+            i += 1
     return dictionary
 
+
+def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
+    dictionary = {}
+    
+    return dictionary
         
