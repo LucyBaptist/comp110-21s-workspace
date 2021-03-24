@@ -44,7 +44,6 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
         i: int = 0
         while i < row_num:
             list_col.append(column)
-            dictionary[column] = list_col
             i += 1
         dictionary[column] = list_col
     return dictionary
