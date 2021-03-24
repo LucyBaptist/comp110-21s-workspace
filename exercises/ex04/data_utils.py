@@ -19,6 +19,7 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
 
 
 def column_values(a: list[dict[str, str]], b: str) -> list[str]:
+    """Finds column values."""
     columns = []
     for row in a:
         columns.append(row[b])
@@ -26,6 +27,7 @@ def column_values(a: list[dict[str, str]], b: str) -> list[str]:
 
 
 def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
+    """Table to dictionary."""
     dictionary = {}
     for col in x:
         for item in col.keys():
@@ -35,6 +37,7 @@ def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
 
 
 def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
+    """Table with rows of data."""
     dictionary = {}
     for column in table:
         list_col = []
@@ -47,6 +50,7 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
 
 
 def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
+    """Specific subset."""
     dictionary = {}
     for item in names:
         if item in dct:
@@ -57,6 +61,7 @@ def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
 
 
 def count(l: list[str]) -> dict[str, int]:
+    """Counts."""
     dictionary = {}
     for item in l:
         if item in dictionary:
