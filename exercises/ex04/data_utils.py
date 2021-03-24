@@ -43,7 +43,8 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
         list_col = []
         i: int = 0
         while i < row_num:
-            list_col.append(table[column[i]])
+            x = column[i]
+            list_col.append(table[x])
             i += 1
         dictionary[column] = list_col
     return dictionary
@@ -55,8 +56,6 @@ def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
     for item in names:
         if item in dct:
             dictionary[item] = dct[item]
-        else:
-            dct[item] = dct[item]
     return dictionary
 
 
