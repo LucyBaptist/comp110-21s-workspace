@@ -6,6 +6,7 @@ __author__ = "730386091"
 from csv import DictReader
 
 
+
 def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
     """Read a CSV file's contents into a list of rows."""
     rows: list[dict[str, str]] = []
@@ -41,6 +42,7 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
         while i < row_num:
             list_col.append(column)
             i += 1
+        dictionary[column] = list_col
     return dictionary
 
 
