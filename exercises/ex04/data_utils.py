@@ -12,31 +12,25 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
     file_handle = open(csv_file, "r", encoding = "utf8")
     csv_reader = DictReader(file_handle)
     for row in csv_reader:
-        print(row)
-
+        rows.append(row)
     file_handle.close()
-
-    # TODO 0.1) Complete the implementation of this function here.
     return rows
 
 
-# TODO: Define the other functions here.
-
 def column_values(a: list[dict[str, str]], b: str) -> list[str]:
     columns = []
-    key = b
     for row in a:
-        columns.append(row[key])
+        columns.append(row[b])
     return columns
 
 
 def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
     dictionary = {}
     for col in x:
-        name: str = col.keys
-        lst = column_values(x, name)
-        dictionary[col] = lst
-        return dictionary
+        for item in col.keys():
+            lst = column_values(x, item)
+            dictionary[item] = lst
+    return dictionary
 
 
 def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
@@ -52,6 +46,19 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
 
 def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
     dictionary = {}
-    
+    for item in names:
+        if item in dct:
+            dictionary[item] = dct[item]
+        else:
+            dct[item] = dct[item]
     return dictionary
-        
+
+
+def count(l: list[str]) -> dict[str, int]:
+    dictionary = {}
+    for item in l:
+        if item in dictionary:
+            dictionary[item] += 1
+        else: 
+            dictionary[item] = 1
+    return dictionary
