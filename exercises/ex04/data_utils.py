@@ -56,6 +56,9 @@ def select(dct: dict[str, list[str]], names: list[str]) -> dict[str, list[str]]:
     for item in names:
         if item in dct:
             dictionary[item] = dct[item]
+            return dictionary
+        else: 
+            return dictionary
     return dictionary
 
 
