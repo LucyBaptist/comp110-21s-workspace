@@ -46,8 +46,6 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
             list_col.append(val[i])
             i += 1
         dictionary[column] = list_col
-        if row_num >= len(list_col):
-            dictionary = table
     return dictionary
 
 
