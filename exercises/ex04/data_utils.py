@@ -10,7 +10,7 @@ def read_csv_rows(csv_file: str) -> list[dict[str, str]]:
     """Read a CSV file's contents into a list of rows."""
     rows: list[dict[str, str]] = []
     file_handle = open(csv_file, "r", encoding="utf8")
-    csv_reader= DictReader(file_handle)
+    csv_reader =DictReader(file_handle)
     for row in csv_reader:
         rows.append(row)
     file_handle.close()
@@ -42,7 +42,7 @@ def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
         val = table[column]
         list_col: list[str] = []
         i: int = 0
-        while i < row_num:
+        while len(list_col) <= row_num:
             list_col.append(val[i])
             i += 1
         dictionary[column] = list_col
