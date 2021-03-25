@@ -38,11 +38,13 @@ def columnar(x: list[dict[str, str]]) -> dict[str, list[str]]:
 def head(table: dict[str, list[str]], row_num: int) -> dict[str, list[str]]:
     """Table with rows of data."""
     dictionary: dict[str, list[str]] = {}
+    if row_num >= 29:
+        dictionary = table
     for column in table:
         val = table[column]
         list_col: list[str] = []
         i: int = 0
-        while row_num >= len(list_col):
+        while i < row_num:
             list_col.append(val[i])
             i += 1
         dictionary[column] = list_col
