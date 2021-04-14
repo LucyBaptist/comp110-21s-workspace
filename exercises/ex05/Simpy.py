@@ -13,3 +13,5 @@ class Simpy:
     def __init__ (self, values: list[float]):
         self.values = values
     
+    def __repr__ (self) -> str:
+        
