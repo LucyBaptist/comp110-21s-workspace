@@ -10,4 +10,6 @@ __author__ = "730386091"
 class Simpy:
     values: list[float]
 
-    # TODO: Your constructor and methods will go here.
+    def __init__ (self, values: list[float]):
+        self.values = values
+    
