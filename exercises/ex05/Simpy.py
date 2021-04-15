@@ -16,7 +16,7 @@ class Simpy:
     def __repr__ (self) -> str:
         return(f"{self.values}")
 
-    def __fill__ (self, val: float, length: int) -> None:
+    def fill (self, val: float, length: int) -> None:
         i = 0
         while i < length:
             self.values[i] = val
