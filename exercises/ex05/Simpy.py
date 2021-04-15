@@ -17,9 +17,9 @@ class Simpy:
         return(f"{self.values}")
 
     def fill (self, val: float, length: int) -> None:
-        i = 0
-        while i < length:
-            self.values[i] = val
+        i: int = 0
+        while i <= length:
+            self.values.append(val)
             i += 1
         
     
