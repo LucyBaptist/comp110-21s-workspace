@@ -23,7 +23,14 @@ class Simpy:
             i += 1
         
     def arrange (self, start: float, stop: float, step: float) -> None:
-### COMPLETE THIS
+        assert step != 0.0
+        self.values[0] = start
+        i: float = 0
+        while i < stop:
+            self.values.append(i)
+            i *= step
+        
+        
     
     def sum (self) -> float:
         length: float = sum(self.values)
