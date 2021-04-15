@@ -22,7 +22,7 @@ class Simpy:
             self.values.append(val)
             i += 1
         
-    def arrange (self, start: float, stop: float, step: float) -> None:
+    def arange (self, start: float, stop: float, step: float) -> None:
         assert step != 0.0
         self.values[0] = start
         i: float = 0
