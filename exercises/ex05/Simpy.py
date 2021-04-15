@@ -22,4 +22,9 @@ class Simpy:
             self.values.append(val)
             i += 1
         
+    def arrange (self, start: float, stop: float, step: float) -> None:
+### COMPLETE THIS
     
+    def sum (self) -> float:
+        length: float = sum(self.values)
+        return length
