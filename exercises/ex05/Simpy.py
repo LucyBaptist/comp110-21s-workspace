@@ -25,13 +25,19 @@ class Simpy:
             i += 1
         
 
-    def arange (self, start: float, stop: float, step: float) -> None:
-        assert step != 0.0
+    def arange (self, start: float, stop: float, step: Union[float, None]) -> None:
         self.values[0] = start
         i: float = 0
-        while i < stop:
-            self.values.append(i)
-            i *= step
+        if isinstance(step, float):
+            assert step != 0.0
+            while i < stop:
+                self.values.append(i)
+                i *= step
+
+        else:
+            while i < stop:
+                self.values.append(i)
+                i += 1
     
 
     def sum (self) -> float:
