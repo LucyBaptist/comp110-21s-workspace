@@ -9,7 +9,7 @@ __author__ = "730386091"
 
 class Simpy:
     values: list[float]
-    step: float = 1.0
+    
 
     def __init__ (self, values: list[float]):
         self.values = values
@@ -26,7 +26,7 @@ class Simpy:
             i += 1
         
 
-    def arange (self, start: float, stop: float, step: float) -> None:
+    def arange ([self, start: float, stop: float, step: float]) -> None:
         assert step != 0.0
         self.values[0] = start
         i: float = 0
