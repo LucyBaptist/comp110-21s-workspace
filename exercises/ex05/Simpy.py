@@ -120,6 +120,6 @@ class Simpy:
             i = 0
             while i < len(rhs):
                 if rhs[i] == True:
-                    self.values.append(self.values[i])
+                    result.values.append(self.values[i])
 
         return result
