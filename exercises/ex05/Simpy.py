@@ -26,7 +26,7 @@ class Simpy:
             i += 1
         
 
-    def arange ([self, start: float, stop: float, step: float]) -> None:
+    def arange (self, start: float, stop: float, step = 1.0) -> None:
         assert step != 0.0
         self.values[0] = start
         i: float = 0
