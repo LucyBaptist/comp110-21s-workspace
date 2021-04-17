@@ -116,10 +116,12 @@ class Simpy:
             result = self.values[rhs]
 
         else:
-            result = Simpy([])
             i = 0
-            while i < len(rhs):
-                if rhs[i] == True:
-                    result.values.append(self.values[i])
-
+            rslt: list[float] = []
+            for item in rhs:
+                if item == True:
+                    rslt.append(self.values[i])
+                i += 1
+            result = Simpy([])
+            result.values = rslt
         return result
