@@ -28,10 +28,10 @@ class Simpy:
 
     def arange (self, start: float, stop: float, step = 1.0) -> None:
         assert step != 0.0
-        self.values[0] = start
+        self.values = [start]
         i = 1
         while i < stop:
-            self.values[0] = start + (i * step)
+            self.values[i] = start + (i * step)
             i += 1
 
 
