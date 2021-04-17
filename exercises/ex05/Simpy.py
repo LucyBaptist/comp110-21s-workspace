@@ -22,7 +22,7 @@ class Simpy:
     def fill (self, val: float, length: int) -> None:
         i: int = 0
         while i <= length:
-            self.values.append(val)
+            self.values[i] = val
             i += 1
         
 
