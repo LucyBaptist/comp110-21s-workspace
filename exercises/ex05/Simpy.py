@@ -111,6 +111,15 @@ class Simpy:
         return result
 
 
-    def __getitem__(self, rhs: int) -> float:
-        result = self.values[rhs]
+    def __getitem__(self, rhs: Union[int, list[bool]]) -> Union[float, Simpy]:
+        if isinstance(rhs, int):
+            result = self.values[rhs]
+
+        else:
+            result = Simpy([])
+            i = 0
+            while i < len(rhs):
+                if rhs[i] == True:
+                    self.values.append(self.values[i])
+
         return result
