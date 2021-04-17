@@ -26,7 +26,8 @@ class Simpy:
             i += 1
         
 
-    def arange (self, start: float, stop: float, step: float or float = 1.0) -> None:
+    ### FIX 
+    def arange (self, start: float, stop: float, step=1.0) -> None:
         assert step != 0.0
         i = 0
         while i < abs(stop - step):
