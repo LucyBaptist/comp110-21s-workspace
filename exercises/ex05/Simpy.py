@@ -112,5 +112,5 @@ class Simpy:
 
 
     def __getitem__(self, rhs: int) -> float:
-        result = self[rhs]
+        result = self.values[rhs]
         return result
