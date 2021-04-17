@@ -29,7 +29,7 @@ class Simpy:
     def arange (self, start: float, stop: float, step = 1.0) -> None:
         assert step != 0.0
         i = 0
-        while i < abs(stop):
+        while i < abs(stop - step):
             self.values.append(start + (i * step))
             i += 1
 
