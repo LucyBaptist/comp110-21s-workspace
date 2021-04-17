@@ -53,7 +53,7 @@ class Simpy:
         return Simpy(result)
 
 
-    def __pow___ (self, rhs: Union[float, Simpy]) -> Simpy:
+    def __pow__ (self, rhs: Union[float, Simpy]) -> Simpy:
         result: list[float] = []
         if isinstance(rhs, float):
             for item in self.values:
