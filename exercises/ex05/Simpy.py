@@ -20,9 +20,10 @@ class Simpy:
 
 
     def fill (self, val: float, length: int) -> None:
-        i: int = 0
+        self.values = [val]
+        i: int = 1
         while i <= length:
-            self.values[i] = val
+            self.values.append(val)
             i += 1
         
 
