@@ -109,3 +109,8 @@ class Simpy:
                 result.append(self.values[i] > rhs.values[i])
         
         return result
+
+
+    def __getitem__(self, rhs: int) -> float:
+        result = self[rhs]
+        return result
