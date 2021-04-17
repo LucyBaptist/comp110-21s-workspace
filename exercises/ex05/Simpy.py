@@ -30,7 +30,7 @@ class Simpy:
         assert step != 0.0
         i = 0
         while i < abs(stop):
-            self.values[i] = start + (i * step)
+            self.values.append(start + (i * step))
             i += 1
 
 
