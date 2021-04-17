@@ -81,3 +81,17 @@ class Simpy:
                 result.append(self.values[i] % rhs.values[i])
         
         return Simpy(result)
+
+
+    def __eq__ (self, rhs: Union[float, Simpy]) -> list[bool]:
+        result: list[bool] = []
+        if isinstance(rhs, float):
+            for item in self.values:
+                result.append(item == rhs)
+        
+        else: 
+            assert len(self.values) == len(rhs.values)
+            for i in range(len(self.values)):
+                result.append(self.values[i] == rhs.values[i])
+        
+        return result
